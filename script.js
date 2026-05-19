@@ -1,4 +1,4 @@
-const automationHeroImage = "url('https://img.magnific.com/premium-photo/automation-software-technology-process-system-business-concept-2021_161452-9171.jpg')";
+const automationHeroImage = "url('assets/automation-background.jpg')";
 
 const industries = {
   clinic: {
