@@ -1,3 +1,5 @@
+const automationHeroImage = "url('https://img.magnific.com/premium-photo/automation-software-technology-process-system-business-concept-2021_161452-9171.jpg')";
+
 const industries = {
   clinic: {
     label: "병원 / 의원",
@@ -48,7 +50,7 @@ const industries = {
     label: "B2B / 컨설팅",
     hint: "문제 해결, 리드 확보",
     service: "성장을 만드는 실무형 컨설팅",
-    image: "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80')",
+    image: automationHeroImage,
     benefits: ["문제 구조화", "실행 가능한 로드맵", "성과 지표 관리"],
     objections: ["우리 회사에 맞는지 모르겠어요", "투자 대비 성과가 궁금해요", "내부 실행까지 가능할까요"],
     steps: ["문제 인식", "자료 제출", "진단 미팅", "제안서 검토", "프로젝트 착수"]
@@ -178,7 +180,7 @@ function renderPreview() {
   const copy = getCopy();
   const proofItems = copy.proofs.length ? copy.proofs : ["빠른 응답", "투명한 안내", "전문 경험", "사후 관리"];
 
-  preview.style.setProperty("--hero-image", copy.image);
+  preview.style.setProperty("--hero-image", `${copy.image || automationHeroImage}, ${automationHeroImage}`);
   preview.innerHTML = `
     <section class="preview-hero">
       <div class="preview-nav">

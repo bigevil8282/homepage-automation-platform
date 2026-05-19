@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+  --automation-bg: url("https://img.magnific.com/premium-photo/automation-software-technology-process-system-business-concept-2021_161452-9171.jpg");
   --ink: #172029;
   --muted: #687482;
   --line: #d9e0e7;
@@ -22,7 +23,37 @@ body {
   min-height: 100vh;
   font-family: Pretendard, "Segoe UI", sans-serif;
   color: var(--ink);
-  background: var(--paper);
+  background:
+    linear-gradient(120deg, rgba(4, 14, 25, 0.92), rgba(8, 34, 46, 0.82)),
+    var(--automation-bg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(15, 143, 133, 0.22), transparent 28%),
+    radial-gradient(circle at 80% 4%, rgba(40, 105, 184, 0.26), transparent 24%),
+    linear-gradient(180deg, rgba(2, 8, 16, 0.08), rgba(2, 8, 16, 0.66));
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.13;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
 }
 
 button,
@@ -33,16 +64,21 @@ textarea {
 }
 
 .app-shell {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(320px, 410px) minmax(0, 1fr);
   min-height: 100vh;
+  background: rgba(245, 247, 249, 0.78);
+  backdrop-filter: blur(18px);
 }
 
 .builder {
-  border-right: 1px solid var(--line);
-  background: #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.86);
   padding: 24px;
   overflow-y: auto;
+  box-shadow: 12px 0 45px rgba(4, 18, 28, 0.16);
 }
 
 .brand-lockup {
@@ -58,9 +94,11 @@ textarea {
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(15, 143, 133, 0.95), rgba(40, 105, 184, 0.95));
   color: white;
   font-weight: 800;
+  box-shadow: 0 12px 28px rgba(15, 143, 133, 0.28);
 }
 
 .eyebrow {
@@ -219,6 +257,11 @@ button.secondary:hover {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 42px rgba(4, 18, 28, 0.12);
 }
 
 .device-tabs {
@@ -254,10 +297,15 @@ button.secondary:hover {
 .preview-frame {
   overflow: auto;
   min-height: 480px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 8px;
-  background: #cfd8df;
+  background:
+    linear-gradient(135deg, rgba(9, 23, 36, 0.88), rgba(16, 60, 76, 0.62)),
+    var(--automation-bg);
+  background-size: cover;
+  background-position: center;
   box-shadow: var(--shadow);
+  padding: 16px;
 }
 
 .preview-frame.mobile .site-preview {
@@ -269,6 +317,9 @@ button.secondary:hover {
 .site-preview {
   min-height: 100%;
   background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(5, 18, 28, 0.28);
 }
 
 .preview-hero {
@@ -277,10 +328,24 @@ button.secondary:hover {
   padding: 34px clamp(22px, 5vw, 72px) 54px;
   color: #fff;
   background:
-    linear-gradient(90deg, rgba(10, 19, 28, 0.88), rgba(10, 19, 28, 0.58), rgba(10, 19, 28, 0.18)),
+    linear-gradient(90deg, rgba(6, 13, 22, 0.92), rgba(10, 36, 48, 0.72), rgba(10, 19, 28, 0.22)),
     var(--hero-image);
   background-size: cover;
   background-position: center;
+}
+
+.preview-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.42), transparent);
+}
+
+.preview-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .preview-nav {
@@ -575,9 +640,10 @@ button.secondary:hover {
   grid-template-columns: 240px 1fr;
   gap: 18px;
   padding: 18px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.38);
   border-radius: 8px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 16px 42px rgba(4, 18, 28, 0.12);
 }
 
 .output-panel h2 {
