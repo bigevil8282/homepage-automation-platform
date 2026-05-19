@@ -6,6 +6,14 @@
 
 이 프로젝트는 Vercel + Supabase 조합을 기본 운영 방식으로 권장합니다.
 
+현재 즉시 공개용 GitHub Pages 주소:
+
+```txt
+https://bigevil8282.github.io/homepage-automation-platform/
+```
+
+커스텀 도메인은 Cloudflare DNS가 정상 연결된 뒤 GitHub Pages 또는 Vercel에서 다시 추가하세요.
+
 ## 0. Supabase 리드 저장소 만들기
 
 1. Supabase 프로젝트 생성
@@ -36,7 +44,7 @@ SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 
 ## 2. GitHub Pages로 연결
 
-이 프로젝트에는 GitHub Pages용 `CNAME` 파일이 이미 들어 있습니다.
+Cloudflare DNS가 준비된 뒤 GitHub Pages에서 Custom domain에 `homepageoutomationplatform.com`을 입력하면 됩니다.
 
 GitHub Pages DNS 레코드:
 

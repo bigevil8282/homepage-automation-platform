@@ -2,6 +2,8 @@
 
 여러 직업군에서 바로 쓸 수 있는 마케팅 랜딩페이지와 퍼널 자동 생성기입니다.
 
+공개 GitHub Pages 주소: `https://bigevil8282.github.io/homepage-automation-platform/`
+
 연결 예정 도메인: `homepageoutomationplatform.com`
 
 ## 실행 방법
